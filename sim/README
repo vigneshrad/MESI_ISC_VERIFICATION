@@ -1,0 +1,6 @@
+
+make all : To run the given uvm_test
+
+make gui : Fires the same test as above, however alongside the GUI
+
+make clean : Removes the work directory and the transcript

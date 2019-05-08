@@ -1,0 +1,185 @@
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 2.6.32-754.9.1.el6.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do run.do
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 02:01:28 on May 08,2019
+# vlog -reportprogress 300 ../rtl/mesi_isc_basic_fifo.v ../rtl/mesi_isc_breq_fifos_cntl.v ../rtl/mesi_isc_breq_fifos.v ../rtl/mesi_isc_broad_cntl.v ../rtl/mesi_isc_broad.v ../rtl/mesi_isc_define.v ../rtl/mesi_isc.v 
+# -- Compiling module mesi_isc_basic_fifo
+# -- Compiling module mesi_isc_breq_fifos_cntl
+# -- Compiling module mesi_isc_breq_fifos
+# -- Compiling module mesi_isc_broad_cntl
+# -- Compiling module mesi_isc_broad
+# -- Compiling module mesi_isc
+# 
+# Top level modules:
+# 	mesi_isc
+# End time: 02:01:28 on May 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 02:01:35 on May 08,2019
+# vlog -reportprogress 300 ../tb/mesi_isc_tb_define.v ../tb/mesi_isc_tb_cpu.v 
+# -- Compiling module mesi_isc_tb_cpu
+# 
+# Top level modules:
+# 	mesi_isc_tb_cpu
+# End time: 02:01:35 on May 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 02:01:35 on May 08,2019
+# vlog -reportprogress 300 "+cover" -sv ../tb/interfaces.sv ../tb/sequences.sv ../tb/coverage.sv ../tb/scoreboard.sv ../tb/modules.sv ../tb/tests.sv ../tb/top.sv 
+# -- Compiling interface mbus
+# -- Compiling interface cbus
+# -- Compiling interface tb_bus
+# ** Note: (vlog-2286) ../tb/sequences.sv(1): Using implicit +incdir+/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package sequences
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling package coverage
+# -- Importing package sequences
+# -- Compiling package scoreboard
+# -- Compiling package modules_pkg
+# -- Importing package coverage
+# -- Importing package scoreboard
+# -- Compiling package tests
+# -- Importing package modules_pkg
+# -- Compiling package top_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Importing package modules_pkg
+# -- Importing package sequences
+# -- Importing package coverage
+# -- Importing package scoreboard
+# -- Importing package tests
+# -- Compiling module mesi_isc_tb
+# 
+# Top level modules:
+# 	mesi_isc_tb
+# End time: 02:01:36 on May 08,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c mesi_isc_tb -permit_unmatched_virtual_intf 
+# Start time: 02:01:36 on May 08,2019
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../tb/top.sv(323): (vopt-2241) Connection width does not match width of port 'cbus_addr_i'. The port definition is at: ../tb/mesi_isc_tb_cpu.v(54).
+# ** Warning: ../tb/top.sv(328): (vopt-2958) Implicit wire 'cbus_addr' does not have any driver.
+# Loading sv_std.std
+# Loading work.mbus(fast)
+# Loading work.tb_bus(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.sequences(fast)
+# Loading work.scoreboard(fast)
+# Loading work.coverage(fast)
+# Loading work.modules_pkg(fast)
+# Loading work.cbus(fast)
+# Loading work.tests(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.mesi_isc_tb(fast)
+# Loading work.mesi_isc(fast)
+# Loading work.mesi_isc_tb_cpu(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3015) ../tb/top.sv(323): [PCDPC] - Port size (32) does not match connection size (1) for port 'cbus_addr_i'. The port definition is at: ../tb/mesi_isc_tb_cpu.v(54).
+#    Time: 0 ps  Iteration: 0  Instance: /mesi_isc_tb/mesi_isc_tb_cpu0 File: ../tb/mesi_isc_tb_cpu.v
+# Loading /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test isc_test...
+# UVM_INFO ../tb/modules.sv(42) @ 0: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAITING FOR INST RST DE_ASSERTION
+# UVM_INFO ../tb/modules.sv(42) @ 0: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] WAITING FOR INST RST DE_ASSERTION
+# UVM_INFO ../tb/modules.sv(42) @ 0: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] WAITING FOR INST RST DE_ASSERTION
+# UVM_INFO ../tb/modules.sv(42) @ 0: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] WAITING FOR INST RST DE_ASSERTION
+# UVM_INFO ../tb/modules.sv(44) @ 1000000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] RST DONE, WAIT FOR CLK
+# UVM_INFO ../tb/modules.sv(44) @ 1000000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] RST DONE, WAIT FOR CLK
+# UVM_INFO ../tb/modules.sv(44) @ 1000000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] RST DONE, WAIT FOR CLK
+# UVM_INFO ../tb/modules.sv(44) @ 1000000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] RST DONE, WAIT FOR CLK
+# UVM_INFO ../tb/modules.sv(47) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/modules.sv(47) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/modules.sv(47) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/modules.sv(47) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/sequences.sv(67) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_sequencer_in_h@@cpu0_seq [cpu_inst_seq] ISSUING READ INSTRUCTION TO CPU0
+# UVM_INFO ../tb/sequences.sv(66) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_sequencer_in_h@@cpu1_seq [cpu_inst_seq] ISSUING WRITE INSTRUCTION TO CPU1
+# UVM_INFO ../tb/sequences.sv(67) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_sequencer_in_h@@cpu2_seq [cpu_inst_seq] ISSUING READ INSTRUCTION TO CPU2
+# UVM_INFO ../tb/sequences.sv(66) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_sequencer_in_h@@cpu3_seq [cpu_inst_seq] ISSUING WRITE INSTRUCTION TO CPU3
+# UVM_INFO ../tb/modules.sv(49) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(49) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(49) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(49) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1050000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(47) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/modules.sv(47) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/modules.sv(47) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/modules.sv(47) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/sequences.sv(65) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_sequencer_in_h@@cpu3_seq [cpu_inst_seq] ISSUING NOP INSTRUCTION TO CPU3
+# UVM_INFO ../tb/sequences.sv(66) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_sequencer_in_h@@cpu2_seq [cpu_inst_seq] ISSUING WRITE INSTRUCTION TO CPU2
+# UVM_INFO ../tb/sequences.sv(67) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_sequencer_in_h@@cpu1_seq [cpu_inst_seq] ISSUING READ INSTRUCTION TO CPU1
+# UVM_INFO ../tb/sequences.sv(65) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_sequencer_in_h@@cpu0_seq [cpu_inst_seq] ISSUING NOP INSTRUCTION TO CPU0
+# UVM_INFO ../tb/modules.sv(49) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(49) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu2_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(49) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu1_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(49) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1450000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(47) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/modules.sv(47) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/sequences.sv(65) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_sequencer_in_h@@cpu3_seq [cpu_inst_seq] ISSUING NOP INSTRUCTION TO CPU3
+# UVM_INFO ../tb/sequences.sv(67) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_sequencer_in_h@@cpu0_seq [cpu_inst_seq] ISSUING READ INSTRUCTION TO CPU0
+# UVM_INFO ../tb/modules.sv(49) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(49) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1550000: uvm_test_top.env_h.cpu_agent_in_h.cpu0_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(47) @ 1650000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/sequences.sv(65) @ 1650000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_sequencer_in_h@@cpu3_seq [cpu_inst_seq] ISSUING NOP INSTRUCTION TO CPU3
+# UVM_INFO ../tb/modules.sv(49) @ 1650000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1650000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1650000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAITING FOR INST ACK
+# UVM_INFO ../tb/modules.sv(47) @ 1750000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] CLK DONE WAIT FOR TRANS ITEM
+# UVM_INFO ../tb/sequences.sv(66) @ 1750000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_sequencer_in_h@@cpu3_seq [cpu_inst_seq] ISSUING WRITE INSTRUCTION TO CPU3
+# UVM_INFO ../tb/modules.sv(49) @ 1750000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] GOT ITEM
+# UVM_INFO ../tb/modules.sv(53) @ 1750000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAIT FOR CPU BUSY BEING 0
+# UVM_INFO ../tb/modules.sv(59) @ 1750000: uvm_test_top.env_h.cpu_agent_in_h.cpu3_driver [driver_in] WAITING FOR INST ACK
+# Break key hit
+# Simulation stop requested.
+# End time: 02:05:51 on May 08,2019, Elapsed time: 0:04:15
+# Errors: 0, Warnings: 3
